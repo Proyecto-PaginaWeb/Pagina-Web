@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iMoch</title>
+	<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+    <style>
+     @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 100%;
+  line-height: 1.5;
+}
+body {
+  background-image: url(loginfondo.jpg);
+  margin: 0;
+    background-size: cover;
+	background-attachment: fixed;
+}
+nav {
+  --duration: .5s;
+  --easing: ease-in-out;
+  position: relative;
+  width: 220px;
+  margin: 20px;
+}
+nav ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin: -4px 0 0 0;
+}
+nav a {
+  display: block;
+  text-decoration: none;
+  background: #F35858;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav a:hover {
+  background: #efefef;
+}
+nav .sub-menu a {
+  font-size: .9em;
+  color: #666666;
+  border-left: 2em solid white;
+  padding: .75em;
+  background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+}
+nav .sub-menu a:hover {
+  background: linear-gradient(to right, #dddddd 2px, #efefef 2px);
+}
+nav header {
+  font-weight: 600;
+  display: block;
+  background: rgba(255, 255, 255, 0.5);
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+  transition-delay: var(--delay-out);
+  border-radius: 4px;
+  padding: 1em 1.52em;
+}
+nav header span {
+  border: none;
+  background: transparent;
+  font-size: 1.5em;
+  padding: 0;
+  cursor: pointer;
+  line-height: 1;
+  float: right;
+}
+nav footer button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  padding: calc(1em - 2px);
+  width: 100%;
+  transform-origin: 0 0;
+  transition: transform var(--duration) var(--easing);
+  transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+  cursor: pointer;
+  outline: none;
+  background: #cdcdcd;
+  opacity: 0;
+}
+nav.closed a,
+nav.closed header {
+  transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+  transition-delay: var(--delay-in);
+  color: transparent;
+}
+nav.closed footer button {
+  transition-delay: 0s;
+  transform: scaleY(0.7) scaleX(0.2);
+}
+
+    </style>
+</head>
+<body>
+   
+    <nav class="menu">
+    <header>Menu <span>×</span></header>
+    <ol>
+        <li class="menu-item"><a href="index.html">Inicio</a></li>
+		<li class="menu-item"><a href="login.html">Login</a></li>
+    <li class="menu-item"><a href="contacto.html">Contacto</a></li>    
+        
+    <footer><button aria-label="Toggle Menu">Toggle</button></footer>
+</nav> 
+
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Inicio de Sesión
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Validar correo: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="Correo">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Se requiere contraseña">
+						<input class="input100" type="password" name="pass" placeholder="Contraseña">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn">
+							Iniciar sesión
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Olvidaste
+						</span>
+						<a class="txt2" href="#">
+							Usuario / Contraseña?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Crear cuenta
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script>
+    
+   var $els = $('.menu a, .menu header');
+var count = $els.length;
+var grouplength = Math.ceil(count/3);
+var groupNumber = 0;
+var i = 1;
+$('.menu').css('--count',count+'');
+$els.each(function(j){
+    if ( i > grouplength ) {
+        groupNumber++;
+        i=1;
+    }
+    $(this).attr('data-group',groupNumber);
+    i++;
+});
+
+$('.menu footer button').on('click',function(e){
+    e.preventDefault();
+    $els.each(function(j){
+        $(this).css('--top',$(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
+        $(this).css('--delay-in',j*.1+'s');
+        $(this).css('--delay-out',(count-j)*.1+'s');
+    });
+    $('.menu').toggleClass('closed');
+    e.stopPropagation();
+});
+
+// run animation once at beginning for demo
+setTimeout(function(){
+    $('.menu footer button').click();
+    setTimeout(function(){
+        $('.menu footer button').click();
+    }, (count * 100) + 500 );
+}, 1000);
+ 
+    
+</script>
+</body>
+</html>
